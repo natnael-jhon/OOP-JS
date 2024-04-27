@@ -28,7 +28,7 @@ Issues and PRs are welcome!
 ## Resources ℹ️
 - [MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
 - [JavaScript.info](https://javascript.info/class)
-- [W3Schools](https://www.w3schools.com/js/js_classes.asp)
+- [W3Schools.com](https://www.w3schools.com/js/js_classes.asp)
 
 ## License 📄
 MIT License.
