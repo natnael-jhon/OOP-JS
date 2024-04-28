@@ -13,5 +13,6 @@ function createCarInfo(type, brand, model, year){
   }
 }
 
+
 let toyota = createCarInfo("SUV", "Toyota", "V8", 2024)
 console.log(toyota.info())

@@ -33,6 +33,7 @@ console.log(aba)
 console.log(nati);
 console.log(jordan);
 
+
 console.log(aba.intro());
 console.log(nati.intro());
 console.log(jordan.intro());
