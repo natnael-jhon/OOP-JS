@@ -5,36 +5,36 @@
 
 // Since many houses can be made from the same description, we can create many objects from a class.
 
-// Class Declaration
+
+// Class declaration
 class Person {
-  constructor(firstName, lastName, age) {
-    // Instance Members
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.printUserInfo = function () {
-      return `Name: ${this.firstName} ${this.lastName}, Age: ${this.age}`;
+    constructor(fname, lname, age){
+        // Instace members
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+        this.info = function() {
+            return `Full Name: ${this.fname} ${this.lname} Age: ${this.age}`
+        };
     };
-  }
-  // Prototype Members
-  greeting() {
-    return `Hello there ${this.firstName} ${this.lastName}`;
-  }
+
+    // creating a prototype for our class
+    sayhi() {
+        return `${this.info}`
+    }
+}
+// const nati = new Person("NaTi", "Dev", 17)
+// console.log(nati.sayhi())
+
+// Class inheritance
+
+class Programmer extends Person{
+    constructor(fname, lname, age, favPl, country){
+        super(fname, lname, age) // it calls every peroperty form the perosn Con function
+        this.favPl = favPl;
+        this.country = country;
+    }
 }
 
-// const alex = new Person("Alex", "Mead", 19);
-// console.log(alex);
-// console.log(alex.printUserInfo());
-
-// Inheritance
-class Programmer extends Person {
-  constructor(firstName, lastName, age, pl, experience) {
-    super(firstName, lastName, age); // This just calls the parent class constructor
-    this.pl = pl;
-    this.experience = experience;
-  }
-}
-
-const john = new Programmer("John", "Doe", 19, "JavaScript", 12);
-console.log(john);
-console.log(john.greeting());
+const aba = new Programmer("aba", 'jhon', 22, "Solidity", "duabi")
+console.log(aba)

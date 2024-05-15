@@ -3,29 +3,33 @@
 // 3. Create Instance of "hero" class
 // 4. Create New class name "Mega", inherit properties from "hero" class & provide property of spell
 // 5. Create instance of "Mega" class
-
-class Hero {
-  constructor(name, level) {
+class Hero{
+  constructor(name, level){
     this.name = name;
     this.level = level;
+    this.hi = function(){
+      return `Hello ${this.name}`
+    }
   }
 
-  // Adding a method to the constructor
-  greet() {
-    return `${this.name} says hello.`;
+  greetUp(){
+    return `Hello ${this.name}`.toUpperCase()
   }
-}
-const hero1 = new Hero("Varg", 1);
 
-// Creating a new class from the parent
-class Mage extends Hero {
-  constructor(name, level, spell) {
-    // Chain constructor with super
-    super(name, level);
-
-    // Add a new property
-    this.spell = spell;
+  greetLow(){
+    return `Hello ${this.name}`.toLocaleLowerCase()
   }
 }
 
-const hero2 = new Mage("Lejon", 2, "Magic Missile");
+// const hero = new Hero("hero", "99")
+// console.log(hero.greetLow())
+
+class Mega extends Hero{
+  constructor(name, level, nah ){
+    super(name, level)
+    this.nah = nah;
+  }
+}
+
+const nah = new Mega("nati", "100", 'k')
+console.log(nah)
