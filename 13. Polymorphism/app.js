@@ -1,48 +1,60 @@
 // In JavaScript, polymorphism is typically achieved through method overriding, where a subclass provides its own implementation of a method that is already defined in the parent class.
-
-class Animal {
-  constructor(name) {
+// Superclass
+class Animal{
+  constructor(name){
     this.name = name;
   }
 
-  makeSound() {
-    return "Unknown sound";
+  // 
+
+  makeSound(){
+    return `Unknown sound`
   }
 }
 
-class Dog extends Animal {
-  constructor(name) {
-    super(name);
+
+
+class Dog extends Animal{
+  constructor(name){
+    super(name)
+  }
+  // overriding method
+  makeSound (){
+    return "woff!"
   }
 
-  makeSound() {
-    return "Woof!";
-  }
+
 }
 
-class Cat extends Animal {
-  constructor(name) {
-    super(name);
+class Cat extends Animal{
+  constructor(name){
+    super(name)
   }
-
-  makeSound() {
-    return "Meow!";
-  }
+      // overriding method
+      makeSound(){
+        return `meow!`
+      }
 }
 
-function animalInfo(animal) {
-  console.log(`Name: ${animal.name}`);
-  console.log(`Sound: ${animal.makeSound()}`);
+function animalInfo(animal){
+  console.log("Name: " + animal.name)
+  console.log("Name: " + animal.makeSound())
 }
 
-const genericAnimal = new Animal("Generic Animal");
-animalInfo(genericAnimal);
+const genericAnimal = new Animal("Generic Animal")
+// animalInfo(genericAnimal)
+const dog = new Dog("bingo")
+// animalInfo(dog)
 
-const dog = new Dog("Buddy");
-animalInfo(dog);
+const cat  = new Cat("Wiskers")
+animalInfo(cat)
 
-const cat = new Cat("Whiskers");
-animalInfo(cat);
+
+
+
+
+
+
 
 // ------------------- Define
 // In this example, we have a superclass Animal with a constructor that initializes the name property and a method makeSound() that returns "Unknown sound" by default.
